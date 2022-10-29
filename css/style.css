@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	background-color: var(--very-light-gray);
+	/*
+    Using odd numbers for font size is BAD practice,
+    so, I decided to use 16px instead of 15px.
+  */
+	font-size: 16px;
+	font-family: var(--ff-lexend-deca);
+}
+
+.container {
+	width: 100%;
+	padding: 50px 15px;
+}
+
+.boxes {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.box {
+	padding: 60px;
+}
+
+.box.box_orange {
+	background-color: var(--bright-orange);
+	color: var(--bright-orange);
+}
+
+.box.box_dark-cyan {
+	background-color: var(--dark-cyan);
+	color: var(--dark-cyan);
+}
+
+.box.box_darker-cyan {
+	background-color: var(--very-dark-cyan);
+	color: var(--very-dark-cyan);
+}
+
+.box__heading {
+	padding: 40px 0;
+	font-size: 2.5em;
+	font-family: var(--ff-big-shoulders-display);
+	color: var(--very-light-gray);
+	text-transform: uppercase;
+}
+
+.box__description {
+	color: var(--transparent-white);
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+.box__button {
+	width: fit-content;
+	display: block;
+	padding: 12px 30px;
+	margin-top: 30px;
+	color: inherit;
+	background-color: var(--very-light-gray);
+	font-size: 1em;
+	text-transform: capitalize;
+	border: 2px solid var(--very-light-gray);
+	border-radius: 25px;
+	transition: 0.1s;
+}
+
+.box__button:hover {
+	color: var(--very-light-gray);
+	background-color: transparent;
+}
+
+@media (min-width: 768px) {
+	.container {
+		min-height: inherit;
+		padding: 0 10%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.boxes {
+		flex-direction: row;
+		align-items: stretch;
+	}
+
+	.box {
+		width: calc(100% / 3);
+		padding: 30px;
+	}
+
+	.box__heading {
+		padding: 30px 0;
+		font-size: 2em;
+	}
+
+	.box__button {
+		padding: 14px 30px;
+		margin-top: 90px;
+	}
+}
+
+@media (min-width: 992px) {
+	.box {
+		padding: 50px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.box {
+		padding: 60px;
+	}
+}
+
+@media (min-width: 1400px) {
+	.container {
+		padding: 0 15%;
+	}
+}
